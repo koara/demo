@@ -1,0 +1,7 @@
+---
+applications:
+  - name: koara-demo
+    memory: 256MB
+    instances: 1
+    path: build/libs/demo-all.jar
+    buildpack: https://github.com/cloudfoundry/java-buildpack

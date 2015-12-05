@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "com.sparkjava:spark-core:2.3"
+	compile "com.sparkjava:spark-template-freemarker:2.3"
+	compile "io.koara:koara:0.6.0"
+}
+
+task fatJar(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'io.koara.demo.App'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
