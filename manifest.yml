@@ -1,6 +1,8 @@
 ---
 applications:
   - name: koara-demo
+    host: try
+    domain: koara.io
     memory: 256MB
     instances: 1
     path: build/libs/demo-all.jar

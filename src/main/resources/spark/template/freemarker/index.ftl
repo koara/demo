@@ -46,7 +46,7 @@
 				  	<label for="blockquotes">Blockquotes</label>
 				  </li>
 				  <li>
-				  	<input id="code" type="checkbox" name="modules" value="paragraphs"${modules?seq_contains("code")?string('checked="checked"', '')}> 
+				  	<input id="code" type="checkbox" name="modules" value="code"${modules?seq_contains("code")?string('checked="checked"', '')}> 
 				  	<label for="code">Code</label>
 				  </li>
 				</ul>
