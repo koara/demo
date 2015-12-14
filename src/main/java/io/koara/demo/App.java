@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.koara.Module;
 import io.koara.Parser;
 import io.koara.ast.Document;
 import io.koara.renderer.HtmlRenderer;
@@ -32,10 +33,15 @@ public class App {
 			String[] moduleArr = req.queryParamsValues("modules");
 			if(moduleArr == null) { moduleArr = new String[]{};}
 			
-//			List<String> modules = new ArrayList<>();
- 
+			Module[] modules = new Module[moduleArr.length];
+			for(int i=0; i<moduleArr.length;i++) {
+				modules[i] = Module.valueOf(moduleArr[i].toUpperCase());
+			}
+			
 			Parser parser = new Parser();
-			Document document = parser.parse(req.queryParams("input"));
+			parser.setModules(modules);
+			
+			Document document = parser.parse(req.queryParams("input").trim());
 			HtmlRenderer renderer = new HtmlRenderer();
 			document.accept(renderer);
 
