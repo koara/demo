@@ -13,10 +13,21 @@
   	<body>
   		<div id="wr">
 	    	<form action="/" method="post">
-	    		<p><a href="/"><img src="http://koara.io/logo.png" alt="Koara" /></a></p>
+	    		<p><a href="http://www.koara.io"><img src="http://koara.io/logo.png" alt="Koara" /></a></p>
+	    		<ul class="nv">
+				  <li>Currently v0.7.0</li>
+				  <li>·</li>
+				  <li><a href="/docs.html">Docs</a></li>
+				  <li>·</li>
+				  <li><a href="/grammar.html">Grammar</a></li>
+				  <li>·</li>
+				  <li><a href="/projects.html">Projects</a></li>
+				  <li>·</li>
+				  <li><a href="http://try.koara.io">Demo</a></li>
+				</ul>
 	    		
-	    		
-	    		<ul id="nv">
+				<p><textarea name="input" style="width:100%; height: 220px">${input}</textarea></p>
+				<ul class="nv">
 				  <li>
 				  	<input id="paragraphs" type="checkbox" name="modules" value="paragraphs"${modules?seq_contains("paragraphs")?string('checked="checked"', '')}> 
 				  	<label for="paragraphs">Paragraphs</label>
@@ -50,9 +61,6 @@
 				  	<label for="code">Code</label>
 				  </li>
 				</ul>
-				
-				<p><textarea name="input" style="width:100%; height: 220px">${input}</textarea></p>
-	
 				
 				
 				<p><input type="submit" value="Convert"><p>
