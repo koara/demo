@@ -17,11 +17,11 @@
 	    		<ul class="nv">
 				  <li>Currently v0.7.0</li>
 				  <li>·</li>
-				  <li><a href="/docs.html">Docs</a></li>
+				  <li><a href="http://www.koara.io/docs.html">Docs</a></li>
 				  <li>·</li>
-				  <li><a href="/grammar.html">Grammar</a></li>
+				  <li><a href="http://www.koara.io/grammar.html">Grammar</a></li>
 				  <li>·</li>
-				  <li><a href="/projects.html">Projects</a></li>
+				  <li><a href="http://www.koara.io/projects.html">Projects</a></li>
 				  <li>·</li>
 				  <li><a href="http://try.koara.io">Demo</a></li>
 				</ul>
@@ -67,7 +67,7 @@
 			</form>
 			<#if output??>
 			  	<p><em>Html:</em></p>	
-				<p><textarea style="width:100%; height: 220px">${output}</textarea></p>
+				<p><textarea style="width:100%; height: 220px">${output?html}</textarea></p>
 				<p><em>Output:</em></p>	
 				${output}
 			</#if>	

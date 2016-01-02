@@ -4,15 +4,13 @@ import static spark.Spark.get;
 import static spark.Spark.port;
 import static spark.Spark.post;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import io.koara.Module;
 import io.koara.Parser;
 import io.koara.ast.Document;
-import io.koara.renderer.HtmlRenderer;
+import io.koara.renderer.Html5Renderer;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
 
@@ -42,7 +40,7 @@ public class App {
 			parser.setModules(modules);
 			
 			Document document = parser.parse(req.queryParams("input").trim());
-			HtmlRenderer renderer = new HtmlRenderer();
+			Html5Renderer renderer = new Html5Renderer();
 			document.accept(renderer);
 
 			Map<String, Object> attrs = new HashMap<>();
