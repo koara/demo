@@ -15,7 +15,7 @@
 	    	<form action="/" method="post">
 	    		<p><a href="http://www.koara.io"><img src="http://koara.io/logo.png" alt="Koara" /></a></p>
 	    		<ul class="nv">
-				  <li>Currently v0.7.0</li>
+				  <li>Currently v0.8.0</li>
 				  <li>·</li>
 				  <li><a href="http://www.koara.io/docs.html">Docs</a></li>
 				  <li>·</li>
