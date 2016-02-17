@@ -7,10 +7,10 @@ buildscript {
 	}
 }
 
-apply plugin: 'java'
 apply plugin: 'spring-boot' 
+apply plugin: 'war'
 
-jar {
+war {
 	baseName = 'demo'
 	version = '0.0.1-SNAPSHOT'
 }
